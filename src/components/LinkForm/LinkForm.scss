@@ -1,0 +1,39 @@
+.form {
+  margin: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .form__control {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  .form__control--label,
+  .form__control--input,
+  .form__control--error {
+    display: block;
+    border: none;
+  }
+  .form__control--label {
+    color: rgba(101, 64, 101, 1);
+  }
+  .form__control--input {
+    padding: 0.7rem 1rem;
+    border: 1px rgba(101, 64, 101, 0.4) solid;
+    border-radius: 5px;
+  }
+
+  .form__control--input:focus {
+    border: 1px rgba(101, 64, 101, 0.8) solid;
+  }
+  .form__control--error {
+    color: red;
+  }
+}
+
+@media screen and (min-width: 768px) {
+}

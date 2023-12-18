@@ -1,0 +1,25 @@
+.auth {
+  width: 90%;
+  margin: 5rem auto;
+
+  h2 {
+    color: rgba(101, 64, 101, 0.8);
+  }
+  .auth__control {
+    // border-bottom: 10px rgba(101, 64, 101, 0.5) solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: rgba(101, 64, 101, 0.2);
+    border-radius: 10px;
+    box-shadow: 2px 1px 10px 1px rgba(101, 64, 101, 0.4);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .auth {
+    width: 30%;
+  }
+}

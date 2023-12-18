@@ -1,0 +1,48 @@
+.link {
+  padding: 2rem;
+  border-radius: 0.1rem 2.5rem;
+  box-shadow: 2px 1px 3px 1px rgba($color: #464444, $alpha: 0.4);
+  background-color: rgba(101, 64, 101, 0.2);
+  text-align: left;
+  margin: 0%;
+  width: 100%;
+  transition-property: all;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+
+  &:hover {
+    background-color: rgba(101, 64, 101, 0.33);
+    transform: scale(1.01);
+  }
+  & p:hover {
+    color: #672626;
+  }
+}
+
+.link__url {
+  color: #c62323;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.link__footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.6rem;
+  font-weight: normal;
+
+  .link__footer--posted-by,
+  .link__footer--votes {
+    color: #464444;
+  }
+  .link__footer--votes,
+  .link__footer--date {
+    color: #b96f6f;
+  }
+}

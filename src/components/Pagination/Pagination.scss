@@ -1,0 +1,16 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba($color: #000000, $alpha: 0.1);
+  width: fit-content;
+  margin: 1rem 0;
+}
+
+.pagination__button--next,
+.pagination__button--previous {
+  width: 100px;
+}

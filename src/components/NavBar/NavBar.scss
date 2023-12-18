@@ -1,0 +1,39 @@
+.nav-bar {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  background-color: rgba(101, 64, 101, 0.8);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+}
+
+.nav-bar__brand {
+  text-decoration: none;
+  h3 {
+    font-family: forte;
+    font-size: 2rem;
+    text-decoration: none;
+  }
+}
+
+.nav-bar__items {
+  list-style: none;
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: white;
+  }
+}
