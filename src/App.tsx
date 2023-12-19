@@ -11,6 +11,8 @@ import { AuthContextType } from "./context/types";
 import { Search } from "./components/Search/Search";
 import { SearchPage } from "./pages/SearchPage/SearchPage";
 import { LinkList } from "./components/LinkList/LinkList";
+import { About } from "./pages/About/About";
+import { FeedDetail } from "./pages/FeedDetail/FeedDetail";
 function App() {
   const { pathname } = useLocation();
   const { setToken, token } = useAuthProvider() as AuthContextType;
@@ -20,11 +22,11 @@ function App() {
       setToken(savedToken!);
     }
   }, []);
+
   return (
     <>
       <Toaster />
       <NavBar />
-      <Search />
       <Routes>
         {token && (
           <Route element={<Navigate to={"/"} replace />} path="/auth" />
@@ -36,6 +38,8 @@ function App() {
         <Route element={<Feed />} path="/" />
         <Route element={<NotFound />} path="*" />
         <Route element={<SearchPage />} path="/search/:key" />
+        <Route element={<About />} path="/about" />
+        <Route element={<FeedDetail />} path="/feed/:id" />
       </Routes>
       {pathname.includes("auth") || <Footer />}
     </>

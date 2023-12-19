@@ -1,0 +1,56 @@
+.sidebar {
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 50;
+  margin: auto;
+  padding: 2rem;
+  background-color: rgb(220, 216, 216);
+  min-height: 50vh;
+  animation: slideIn 200ms linear 10ms alternate;
+}
+
+.sidebar__items {
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.sidebar__items__link {
+  display: block;
+  width: 100%;
+}
+.sidebar__items__link button {
+  width: 100%;
+  background-color: rgba(101, 64, 101, 0.8);
+  border-radius: 10px;
+  padding: 0.7rem;
+  color: white;
+  outline: none;
+  border: none;
+  box-shadow: inset 1px 1px 3px 0px white;
+  justify-self: flex-end;
+}
+
+.times-icon {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  color: rgb(59, 58, 58);
+  font-size: 2rem;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate(-100%);
+  }
+  to {
+    transform: translate((0%));
+  }
+}

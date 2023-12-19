@@ -32,3 +32,10 @@ export type AuthContextType = {
   setToken: (token: string) => void;
   clearToken: () => void;
 };
+
+export type AppContextType = {
+  showSearch: boolean;
+  setShowSearch: (newState: boolean) => void;
+  showSidebar: boolean;
+  setShowSidebar: (newState: boolean) => void;
+};

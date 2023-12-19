@@ -12,7 +12,8 @@
   position: fixed;
   z-index: 2;
   top: 5rem;
-  left: 0%;
+  left: 5%;
+  transition: all 500ms ease-in-out;
   .search__control--input {
     display: block;
     border: none;
@@ -40,9 +41,9 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 786px) {
   .search__control {
-    width: 30%;
-    left: 35%;
+    max-width: 20rem;
+    left: calc((100% - 20rem) / 2);
   }
 }

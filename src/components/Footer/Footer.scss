@@ -1,14 +1,34 @@
 .footer {
-  background-color: rgba(101, 64, 101, 1);
+  background-color: rgba(101, 64, 101, 0.1);
   padding: 2rem;
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   gap: 1rem;
+  color: black;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0%;
+  margin: 0%;
+  color: black;
+}
+
+.footer a {
+  color: rgba(101, 64, 101, 0.8);
 }
 
 .footer__brand {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: white;
+  color: rgba(101, 64, 101, 0.7);
   font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+  }
 }

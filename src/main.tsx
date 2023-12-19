@@ -10,12 +10,14 @@ import {
 } from "@apollo/client";
 import { split } from "@apollo/client";
 import { getMainDefinition } from "@apollo/client/utilities";
-import { OperationDefinitionNode } from "@apollo/client/utilities/types";
+// import { OperationDefinitionNode } from "@apollo/client/utilities/types";
 import { WebSocketLink } from "@apollo/client/link/ws";
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter } from "react-router-dom";
 import { LinkContextProvider } from "./context/link-context.tsx";
 import { AuthProvider } from "./context/auth-context.tsx";
+import { AppContext, AppContextProvider } from "./context/app-context.tsx";
+import { Definition } from "./types.ts";
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem("token");
@@ -43,9 +45,7 @@ const httpLink = createHttpLink({
 
 const link = split(
   ({ query }) => {
-    const { kind, operation } = getMainDefinition(
-      query
-    ) as OperationDefinitionNode;
+    const { kind, operation } = getMainDefinition(query) as Definition;
     return kind === "OperationDefinition" && operation === "subscription";
   },
   wsLink,
@@ -61,11 +61,13 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <ApolloProvider client={client}>
-        <AuthProvider>
-          <LinkContextProvider>
-            <App />
-          </LinkContextProvider>
-        </AuthProvider>
+        <AppContextProvider>
+          <AuthProvider>
+            <LinkContextProvider>
+              <App />
+            </LinkContextProvider>
+          </AuthProvider>
+        </AppContextProvider>
       </ApolloProvider>
     </BrowserRouter>
   </React.StrictMode>

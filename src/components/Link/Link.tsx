@@ -81,7 +81,11 @@ export const Link = ({ link, text }: { link: LinkProp; text: number }) => {
   };
 
   return (
-    <li className="link">
+    <li
+      className="link"
+      onClick={() => {
+        navigate(`/feed/${link.id}`);
+      }}>
       <h3 className="link__url">{link.url}</h3>
       <p className="link__description">{link.description}</p>
       <footer className="link__footer">

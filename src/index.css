@@ -1,6 +1,8 @@
 #root {
   width: 100vw;
   overflow-x: hidden;
+  padding: 0%;
+  margin: auto;
 }
 *,
 *::after,
@@ -19,6 +21,7 @@
   padding: 1rem 1.3rem;
   border: none;
   cursor: pointer;
+  text-decoration: none;
 }
 .btn:active {
   border: none;
@@ -61,8 +64,9 @@
 }
 
 body {
-  width: inherit;
   overflow-x: hidden;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .form {
@@ -110,6 +114,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 6rem;
   width: 100%;
+  min-height: 70vh;
 }

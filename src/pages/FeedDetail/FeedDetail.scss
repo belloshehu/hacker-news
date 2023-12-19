@@ -1,0 +1,113 @@
+.feed-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 6rem 0rem;
+  min-height: auto;
+}
+.feed-detail__top-voted {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+}
+.feed-detail__top-voted__heading {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bolder;
+  color: rgba(101, 64, 101, 0.8);
+  align-self: center;
+}
+
+.feed-detail__top-voted ul {
+  list-style: none;
+  padding: 0%;
+  margin: 0%;
+  gap: 20px;
+  display: flex;
+  animation-name: scroll;
+  animation-duration: 15000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  max-height: fit-content;
+  width: 100%;
+}
+.feed-detail__top-voted ul:hover {
+  animation-play-state: paused;
+}
+.feed-detail__top-voted li {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(101, 64, 101, 0.1);
+  outline: none;
+}
+.feed-detail__description {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+
+  p:first-of-type::first-letter {
+    font-size: 4rem;
+  }
+  gap: 1rem;
+
+  h1 {
+    font-size: 2rem;
+    color: rgba(101, 64, 101, 0.8);
+    padding: 1rem;
+    background-color: rgba(101, 64, 101, 0.1);
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+.feed-detail__vote {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.feed-detail__date {
+  color: rgba(101, 64, 101, 0.8);
+  padding: 1rem;
+  background-color: rgba(101, 64, 101, 0);
+  width: 30%;
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .feed-detail__description {
+    padding: 3rem;
+    h1 {
+      font-size: 5rem;
+    }
+  }
+}
+
+.feed-detail__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@keyframes scroll {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(60%);
+  }
+}
+
+.feed-detail__top-voted::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.feed-detail::-webkit-scrollbar-thumb {
+  background-color: aliceblue;
+  outline: 1 solid rgba(101, 64, 101, 0.8);
+}
+
+.feed-detail::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px black;
+}

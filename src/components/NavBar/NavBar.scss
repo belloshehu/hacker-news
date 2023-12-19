@@ -11,20 +11,19 @@
   left: 0%;
 }
 
-.nav-bar__brand {
+.nav-bar__brand a {
+  font-size: 2rem;
   text-decoration: none;
-  h3 {
-    font-family: forte;
-    font-size: 2rem;
-    text-decoration: none;
-  }
+  color: white;
+  text-shadow: 1px 3px 1px red;
+  font-style: oblique;
 }
 
 .nav-bar__items {
   list-style: none;
   padding: 0%;
   margin: 0%;
-  display: flex;
+  display: none;
   gap: 20px;
   align-items: center;
 
@@ -35,5 +34,32 @@
 
   a:hover {
     color: white;
+    background-color: rgba(101, 64, 101, 0.98);
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+    transition: all 200ms ease-in-out;
+  }
+}
+.search-icon {
+  font-size: large;
+  margin: auto;
+  transition: all 200ms ease-in-out;
+}
+.search-icon:hover {
+  font-size: 1.5rem;
+}
+
+.bar-icon {
+  display: block;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .bar-icon {
+    display: none;
+  }
+  .nav-bar__items {
+    display: flex;
   }
 }

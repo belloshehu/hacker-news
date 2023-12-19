@@ -34,3 +34,8 @@ export type FeedType = {
     links: LinkProp[];
   };
 };
+
+export interface Definition {
+  operation: string;
+  kind: string;
+}
