@@ -29,7 +29,7 @@ const authLink = setContext((_, { headers }) => {
 // link for subscription
 
 const wsLink = new WebSocketLink({
-  uri: "ws://localhost:4000/graphql",
+  uri: "ws://hacker-news-backend.onrender.com/graphql",
   options: {
     reconnect: true,
     connectionParams: {
@@ -40,7 +40,7 @@ const wsLink = new WebSocketLink({
 
 // link for mutation & query
 const httpLink = createHttpLink({
-  uri: "https://hacker-news-backend.onrender.com/",
+  uri: "https://hacker-news-backend.onrender.com/graphql",
 });
 
 const link = split(
