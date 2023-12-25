@@ -4,13 +4,11 @@ import { NotFound } from "./components/NotFound/NotFound";
 import { Auth } from "./pages/Auth/Auth";
 import { Feed } from "./pages/Feed/Feed";
 import { Footer } from "./components/Footer/Footer";
-import { Toast, Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
 import { useAuthProvider } from "./context/auth-context";
 import { AuthContextType } from "./context/types";
-import { Search } from "./components/Search/Search";
 import { SearchPage } from "./pages/SearchPage/SearchPage";
-import { LinkList } from "./components/LinkList/LinkList";
 import { About } from "./pages/About/About";
 import { FeedDetail } from "./pages/FeedDetail/FeedDetail";
 function App() {

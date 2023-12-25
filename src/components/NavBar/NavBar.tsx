@@ -5,7 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import { Search } from "../Search/Search";
 import { useAppContext } from "../../context/app-context";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { Sidebar } from "../Sidebar/Sidebar";
 

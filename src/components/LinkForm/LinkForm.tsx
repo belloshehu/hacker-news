@@ -77,7 +77,7 @@ export const LinkForm = ({ submitBtnRef }: formProps) => {
           url: yup.string().required("Url is required"),
           description: yup.string().required("description is required"),
         })}
-        onSubmit={(values: LinkFormValues, { resetForm }) => {
+        onSubmit={(_, { resetForm }) => {
           setSubmitting(true);
           try {
             createLink();

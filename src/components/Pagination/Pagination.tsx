@@ -1,4 +1,3 @@
-import React from "react";
 import { PaginationProp } from "./types";
 import "./Pagination.scss";
 

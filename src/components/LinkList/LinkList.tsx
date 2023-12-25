@@ -99,7 +99,6 @@ export const LinkList = () => {
   const isNewPage = pathname.includes("new");
   const pageIndexParams = pathname.split("/");
   const page = parseInt(pageIndexParams[pageIndexParams.length - 1]);
-  const pageIndex = page ? (page - 1) * FEED_PER_PAGE : 0;
 
   // fetch data from backend
   const { data, loading, error, subscribeToMore } = useQuery(FEED_QUERY, {
@@ -132,7 +131,7 @@ export const LinkList = () => {
   // subscription for new vote
   subscribeToMore({
     document: NEW_VOTES_SUBSCRIPTION,
-    updateQuery: (prev, { subscriptionData }) => {
+    updateQuery: (_, { subscriptionData }) => {
       const { newVote } = subscriptionData.data;
       toast.success(`${newVote.user.name} voted for ${newVote.link.url}`);
     },

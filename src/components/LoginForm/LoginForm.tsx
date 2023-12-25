@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as yup from "yup";
-import { useLinkContext } from "../../context/link-context";
-import { AuthContextType, LinkContextType } from "../../context/types";
+import { AuthContextType } from "../../context/types";
 import { useMutation, gql } from "@apollo/client";
 import { useAuthProvider } from "../../context/auth-context";
 
@@ -20,7 +19,6 @@ const LOG_USER_MUTATION = gql`
 
 export const LoginForm = () => {
   const [data, setData] = useState({ email: "", password: "" });
-  const { setLinks } = useLinkContext() as LinkContextType;
   const { setToken, setUser } = useAuthProvider() as AuthContextType;
 
   const [userMutation] = useMutation(LOG_USER_MUTATION, {

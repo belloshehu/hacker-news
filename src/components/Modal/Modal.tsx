@@ -1,4 +1,3 @@
-import React from "react";
 import "./Modal.scss";
 import { Backdrop } from "../Backdrop/Backdrop";
 import { ModalProps } from "./types";

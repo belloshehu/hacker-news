@@ -35,10 +35,10 @@ export const Link = ({ link, text }: { link: LinkProp; text: number }) => {
 
   const [vote] = useMutation(VOTE_MUTATION, {
     variables: { linkId: link.id },
-    onCompleted: ({ vote }) => {
+    onCompleted: () => {
       toast.success("You have voted!");
     },
-    onError: (err) => {
+    onError: () => {
       toast.error("Voting failed");
     },
     update: (cache, { data: { vote } }) => {

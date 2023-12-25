@@ -16,7 +16,7 @@ import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter } from "react-router-dom";
 import { LinkContextProvider } from "./context/link-context.tsx";
 import { AuthProvider } from "./context/auth-context.tsx";
-import { AppContext, AppContextProvider } from "./context/app-context.tsx";
+import { AppContextProvider } from "./context/app-context.tsx";
 import { Definition } from "./types.ts";
 
 const authLink = setContext((_, { headers }) => {

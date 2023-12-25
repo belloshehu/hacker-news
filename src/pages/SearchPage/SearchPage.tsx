@@ -4,7 +4,6 @@ import { Link } from "../../components/Link/Link";
 import { useLazyQuery, gql } from "@apollo/client";
 import { LinkProp } from "../../types";
 import "./SearchPage.scss";
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 export const FEED_SEARCH_QUERY = gql`
   query SearchFeed($filter: String!) {

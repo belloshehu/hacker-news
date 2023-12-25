@@ -3,9 +3,9 @@ import { AppContextType } from "./types";
 
 export const AppContext = createContext<AppContextType>({
   showSearch: false,
-  setShowSearch: (newState: boolean) => {},
+  setShowSearch: () => {},
   showSidebar: false,
-  setShowSidebar: (newState: boolean) => {},
+  setShowSidebar: () => {},
 });
 
 export const AppContextProvider = ({ children }: { children: ReactNode }) => {
