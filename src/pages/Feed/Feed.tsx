@@ -11,7 +11,6 @@ import { useAuthProvider } from "../../context/auth-context";
 export const Feed = () => {
   const [showModal, setShowModal] = useState(false);
   const submitBtnRef = useRef<HTMLButtonElement>(null);
-  const { links } = useLinkContext() as LinkContextType;
   const { token } = useAuthProvider() as AuthContextType;
   const navigate = useNavigate();
   const modalConfirmHandler = () => {
@@ -26,7 +25,6 @@ export const Feed = () => {
   return (
     <div className="container">
       <div className="list__top">
-        {/* <h1 className="list__top--count">{links.length}</h1> */}
         <h1>Feeds</h1>
         <button className="btn" onClick={() => setShowModal(true)}>
           new feed

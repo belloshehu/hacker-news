@@ -40,7 +40,7 @@ const wsLink = new WebSocketLink({
 
 // link for mutation & query
 const httpLink = createHttpLink({
-  uri: "http://localhost:4000/",
+  uri: "https://hacker-news-backend.onrender.com/",
 });
 
 const link = split(

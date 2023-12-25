@@ -101,6 +101,7 @@ export const LinkList = () => {
   const page = parseInt(pageIndexParams[pageIndexParams.length - 1]);
   const pageIndex = page ? (page - 1) * FEED_PER_PAGE : 0;
 
+  // fetch data from backend
   const { data, loading, error, subscribeToMore } = useQuery(FEED_QUERY, {
     variables: getQueryVariables(isNewPage, page),
   });
